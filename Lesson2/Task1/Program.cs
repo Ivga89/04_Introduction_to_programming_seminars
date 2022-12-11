@@ -8,7 +8,7 @@
 System.Console.WriteLine($"Enter a three-digit number: ");  //число один раз требуется, поэтому не стала использовать функцию/метод
 int n = Convert.ToInt32(Console.ReadLine());
 
-if (n >= 100 && n < 1000) {
+if (n >= 100 && n < 1000) {  //проверяем трехзначное ли число
     int div = n / 10;
     int rem = div % 10;
     System.Console.WriteLine($"The second digit of number {n} is {rem}.");
