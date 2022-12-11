@@ -26,4 +26,5 @@ switch(count) {
     case 8: desValue = (n / 100000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
     case 9: desValue = (n / 1000000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
     case 10: desValue = (n / 10000000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    default: System.Console.WriteLine("Value was either too large or too small for an Int32."); break;
 }
