@@ -5,15 +5,25 @@
 // 32679 -> 6
 
 System.Console.Write("Enter any number: ");
-int n = Convert.ToInt32(Console.ReadLine());
+int input = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+int n = input;
+int desValue = 0;
 
-if (n >= 100 && n < 1000) {    //проверяем есть ли третья цифра
-    int unit = n % 10;
-    System.Console.WriteLine($"The third digit of number {n} is {unit}.");
+while(input > 9) {
+    input = input / 10;
+    count++;
 }
-else if (n > 999) {
-    System.Console.WriteLine("Not such a big number, please!"); //если проверяем третью цифру с лева направо, 
-}                                                                   //очень много проверять 'сколькизначное' число
-else {
-    System.Console.WriteLine("The third digit does not exist.");
+
+switch(count) {
+    case 1: System.Console.WriteLine("The third digit does not exist"); break;
+    case 2: System.Console.WriteLine("The third digit does not exist"); break;
+    case 3: desValue = n % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 4: desValue = (n / 10) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 5: desValue = (n / 100) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 6: desValue = (n / 1000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 7: desValue = (n / 10000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 8: desValue = (n / 100000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 9: desValue = (n / 1000000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
+    case 10: desValue = (n / 10000000) % 10; System.Console.WriteLine($"The third digit is {desValue}"); break;
 }
