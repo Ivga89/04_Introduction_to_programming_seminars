@@ -9,15 +9,20 @@ int Prompt(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+int[] Array(int[] array)
+{
 
-
-
-int countOfArrayElements = Prompt("Enter the count of elements of array");
-int min = Prompt("Enter the min of values");
-int max = Prompt("Enter the max of values");
-int[] array = new int[countOfArrayElements];
+    int min = Prompt("Enter min value: ");
+    int max = Prompt("Enter max value: ");
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(min, max + 1);
         System.Console.Write($"{array[i]} ");
+
     }
+    return array;
+}
+
+int n = Prompt("Enter a number: ");
+int[] arr = Array(new int[n]);
+
